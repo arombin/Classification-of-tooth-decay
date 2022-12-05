@@ -29,7 +29,7 @@ def box_save(path, img, model):
 # In[ ]:
 
 
-def compute_intersect_area_rate_1(index, i):
+def compute_intersect_area_rate_1(index, i, classifications):
 
     if i == 0:
         return 0
@@ -74,7 +74,7 @@ def compute_intersect_area_rate_1(index, i):
 # In[2]:
 
 
-def compute_intersect_area_rate_2(index, i):
+def compute_intersect_area_rate_2(index, i, classifications):
 
     if (i == 0) or (i == 1):
         return 0
@@ -119,7 +119,7 @@ def compute_intersect_area_rate_2(index, i):
 # In[ ]:
 
 
-def compute_intersect_area_rate_3(index, i):
+def compute_intersect_area_rate_3(index, i, classifications):
 
     if (i == 0) or (i == 1) or(i ==2):
         return 0
@@ -164,7 +164,7 @@ def compute_intersect_area_rate_3(index, i):
 # In[ ]:
 
 
-def compute_intersect_area_rate_4(index, i):
+def compute_intersect_area_rate_4(index, i, classifications):
 
     if (i == 0) or (i == 1) or (i == 2) or (i == 3):
         return 0
@@ -209,7 +209,7 @@ def compute_intersect_area_rate_4(index, i):
 # In[ ]:
 
 
-def compute_intersect_area_rate_5(index, i):
+def compute_intersect_area_rate_5(index, i, classifications):
 
     if (i == 0) or (i == 1) or (i == 2) or (i == 3) or (i == 4):
         return 0
@@ -268,19 +268,19 @@ def final_cost(path, img, classifications, coordinates):
         c = float(coordinates[0][i][2]) #x2
         d = float(coordinates[0][i][3]) #y2
 
-        if compute_intersect_area_rate_1(0, i) > 0.2:
+        if compute_intersect_area_rate_1(0, i, classifications) > 0.2:
             continue
 
-        if compute_intersect_area_rate_2(0, i) > 0.2:
+        if compute_intersect_area_rate_2(0, i, classifications) > 0.2:
             continue
 
-        if compute_intersect_area_rate_3(0, i) > 0.2:
+        if compute_intersect_area_rate_3(0, i, classifications) > 0.2:
             continue
 
-        if compute_intersect_area_rate_4(0, i) > 0.2:
+        if compute_intersect_area_rate_4(0, i, classifications) > 0.2:
             continue
 
-        if compute_intersect_area_rate_5(0, i) > 0.2:
+        if compute_intersect_area_rate_5(0, i, classifications) > 0.2:
             continue
 
         draw = ImageDraw.Draw(img)
