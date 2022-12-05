@@ -13,7 +13,8 @@ Classification of tooth decay
 ## Usage
 
 1) 개별 치아로 라벨링된 데이터로 yolo 학습하기
-<img src="./1.jpg" width="500px"></img>
+<img src="./1.jpg" width="300px"></img>
+
 yolov5/data/coco128.yaml에 있는 train, val 및 test 파일 경로를 수정해야합니다.
 또한 train.txt 및 val.txt 안에 있는 데이터 경로를 수정해야합니다.
 ```python
@@ -42,7 +43,8 @@ crop(path, img_list, model)
 ## Usage
 
 1)	augmentain
-<img src="./2.png" width="500px"></img>
+<img src="./2.png" width="300px"></img>
+
 우선 치아 우식을 라벨링하고, 라벨링된 폴더의 데이터를 8:2 비율로 train data set (/resnet/data/labeled)과 test data set(/resnet/data/labeled_test)으로 분리해주었습니다
 그리고 train data set의 데이터를 flip 기능으로 data augmentation을 해주었습니다. 
 여기서 path1은 라벨링된 파일들이 저장되어 있는 폴더이고, path2는 augmentation된 파일들이 저장될 폴더 경로입니다. 
@@ -79,7 +81,8 @@ weight_name2 = ‘ssl_1' #Semi-supervised learning으로 학습될 가중치 이
 semi_train(path, weight_name1, weight_name2)
 ```
 4)	모델 평가하기 (confusion matrix)
-<img src="./3.png" width="500px"></img>
+<img src="./3.png" width="300px"></img>
+
 평가하기 원하는 모델 가중치의 confusion matrix를 확인합니다.
 ```python
 %cd yourpath/Team1/resnet
