@@ -1,0 +1,5 @@
+names:
+  0: teeth
+test: yourpath/yolov5/Data/panorama
+train: yourpath/yolov5/Data/panorama/train.txt
+val: yourpath/yolov5/Data/panorama/val.txt
