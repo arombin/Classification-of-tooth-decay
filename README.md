@@ -4,12 +4,14 @@ Classification of tooth decay
 1.	Yolo로 개별 치아 crop하기
 
 ## Install
+
 ```python
 %cd yourpath/Team1/yolov5
 !pip install -r requirements.txt
 ```
 
 ##Usage
+
 1) 개별 치아로 라벨링된 데이터로 yolo 학습하기
 yolov5/data/coco128.yaml에 있는 train, val 및 test 파일 경로를 수정해야합니다.
 또한 train.txt 및 val.txt 안에 있는 데이터 경로를 수정해야합니다.
@@ -35,7 +37,9 @@ crop(path, img_list, model)
 ```
 
 2.	Resnet으로 치아 우식 분류 학습하기
+
 ##Usage
+
 1)	augmentain
 우선 치아 우식을 라벨링하고, 라벨링된 폴더의 데이터를 8:2 비율로 train data set (/resnet/data/labeled)과 test data set(/resnet/data/labeled_test)으로 분리해주었습니다
 그리고 train data set의 데이터를 flip 기능으로 data augmentation을 해주었습니다. 
@@ -92,6 +96,7 @@ confusion_m(path, weight_name)
 ```
 
 ##Usage
+
 1)	한 사람의 개별 치아 분류 
 견적을 내 줄 사람의 입 전체 데이터를 학습된 yolo 모델로 crop을 해준 후, 데이터들을 (/resnet/data/person)폴더에 저장해줍니다. 그리고 model.py의 predictList 함수를 사용하면, 사람의 개별 치아에 대한 클래스 값 리스트를 받을 수 있습니다.
 ```python
