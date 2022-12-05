@@ -84,7 +84,7 @@ semi_train(path, weight_name1, weight_name2)
 ```
 4)	모델 평가하기 (confusion matrix)
 
-<img src="./3.png" width="300px"></img>
+<img src="./3.png" width="200px"></img>
 
 평가하기 원하는 모델 가중치의 confusion matrix를 확인합니다.
 ```python
