@@ -2,7 +2,7 @@
 Classification of tooth decay
 
 깃허브의 파일을 이용할 경우 파일을 전체 저장하고 Team1폴더안에 넣어주세요.
-<img src="./6.jpg" width="100px"></img>
+<img src="./6.JPG" width="100px"></img>
 
 ## 1.	Yolo로 개별 치아 crop하기
 
