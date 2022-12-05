@@ -1,7 +1,7 @@
 # Classification-of-tooth-decay
 Classification of tooth decay
 
-1.	Yolo로 개별 치아 crop하기
+## 1.	Yolo로 개별 치아 crop하기
 
 ## Install
 
@@ -36,7 +36,7 @@ img_list = glob.glob(path+'/yolov5/data/unlabeled_jpg_te/*.jpg')
 crop(path, img_list, model)
 ```
 
-2.	Resnet으로 치아 우식 분류 학습하기
+## 2.	Resnet으로 치아 우식 분류 학습하기
 
 ## Usage
 
@@ -88,7 +88,7 @@ weight_name = ‘Final3’ #평가 모델 가중치
 confusion_m(path, weight_name)
 ```
 
-3.	학습된 모델로 치아 견적 산출하기
+## 3.	학습된 모델로 치아 견적 산출하기
 ## Install
 ```python
 %cd yourpath/Team1/yolov5
